@@ -9,7 +9,7 @@ spec:
   project: default
 
   destination:
-    name: kind-argocd-cluster
+    name: https://kubernetes.default.svc
     namespace: sms
 
   source:
