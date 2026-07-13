@@ -1,0 +1,29 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+
+metadata:
+  name: sms-backend
+  namespace: argocd
+
+spec:
+  project: default
+
+  destination:
+    name: kind-argocd-cluster
+    namespace: sms
+
+  source:
+    repoURL: https://github.com/Ashir-Qayyum/argocd-hashicorp-vault-integration.git
+    targetRevision: HEAD
+    path: sms-app-helm/sms-backend
+
+    plugin:
+      name: argocd-vault-plugin-helm
+
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+
+    syncOptions:
+      - CreateNamespace=true

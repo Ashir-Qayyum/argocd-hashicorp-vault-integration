@@ -1,0 +1,12 @@
+image:
+  repository: ashirqayyum/sms-backend
+  tag: "1.0"
+
+service:
+  port: 8080
+
+database:
+  host: <path:sms/data/database#POSTGRES_HOST>
+  port: <path:sms/data/database#POSTGRES_PORT>
+  name: <path:sms/data/database#POSTGRES_DB>
+  user: <path:sms/data/database#POSTGRES_USER>

@@ -1,0 +1,11 @@
+image:
+  repository: postgres
+  tag: "16"
+
+database:
+  name: <path:sms/data/database#POSTGRES_DB>
+  user: <path:sms/data/database#POSTGRES_USER>
+  password: <path:sms/data/database#POSTGRES_PASSWORD>
+
+persistence:
+  size: 1Gi
